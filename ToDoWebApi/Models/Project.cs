@@ -25,8 +25,10 @@ namespace ToDoWebApi.Models
         public string ProjectTitle { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Runtime.Serialization.IgnoreDataMember]
         public virtual ICollection<Task> Tasks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [System.Runtime.Serialization.IgnoreDataMember]
         public virtual ICollection<Collaborator> Collaborators { get; set; }
     }
 }

@@ -14,6 +14,7 @@ namespace ToDoWebApi.Models
     using System.Collections.Generic;
     using System.Xml.Serialization;
 
+    
     public partial class Collaborator
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -27,12 +28,10 @@ namespace ToDoWebApi.Models
         public string CollaboratorName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore]
-        [XmlIgnoreAttribute]
+        [System.Runtime.Serialization.IgnoreDataMember]
         public virtual ICollection<Task> Tasks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore]
-        [XmlIgnoreAttribute]
+        [System.Runtime.Serialization.IgnoreDataMember]
         public virtual ICollection<Project> Projects { get; set; }
     }
 }

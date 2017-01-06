@@ -19,10 +19,16 @@ namespace ToDoWebApi.Models
         public System.DateTime DueDate { get; set; }
         public string TaskDescription { get; set; }
         public string TaskStatus { get; set; }
+
+        
         public int ProjectID { get; set; }
+        
         public int CollaboratorID { get; set; }
-    
+
+        [System.Runtime.Serialization.IgnoreDataMember]
         public virtual Collaborator Collaborator { get; set; }
+
+        [System.Runtime.Serialization.IgnoreDataMember]
         public virtual Project Project { get; set; }
     }
 }
