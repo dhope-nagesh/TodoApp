@@ -21,6 +21,7 @@ namespace ToDoWebApi.Controllers
         public IQueryable<Collaborator> GetCollaborators()
         {
             return db.Collaborators;
+            
         }
 
         // GET: api/Collaborator/5
